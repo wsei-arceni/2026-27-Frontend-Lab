@@ -1,8 +1,8 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Header } from './header/header';
-import { Footer } from './footer/footer';
-import { RestaurantList } from './restaurant-list/restaurant-list';
+import { Header } from './components/header/header';
+import { Footer } from './components/footer/footer';
+import { RestaurantList } from './components/restaurant-list/restaurant-list';
 
 @Component({
   imports: [RouterOutlet, Header, Footer, RestaurantList],
@@ -11,5 +11,5 @@ import { RestaurantList } from './restaurant-list/restaurant-list';
   templateUrl: './app.html',
 })
 export class App {
-  protected readonly title = signal('1lab');
+  protected readonly title = signal('FoodApp');
 }

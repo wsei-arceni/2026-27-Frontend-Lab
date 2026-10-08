@@ -1,0 +1,8 @@
+<h2>Restaurant list</h2>
+<section class="list">
+    @for (restaurant of restaurants(); track restaurant.id) {
+        <app-restaurant-card [restaurant]="restaurant"/>
+    } @empty {
+    <div class="no-restaurants">There is no aviable restaurants</div>
+    }
+</section>

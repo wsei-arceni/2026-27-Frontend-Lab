@@ -1,0 +1,10 @@
+<section class="card">
+  <div class="name">{{restaurant().name}}</div>
+  <div class="description">{{restaurant().description}}</div>
+  <div class="cuisine">{{restaurant().cuisine}}</div>
+  <div class="image"><img src="{{restaurant().imageUrl}}" alt="{{restaurant().name}}" width="75px"/></div>
+  <div class="rating">Rating: {{restaurant().rating}}/5</div>
+  <div class="delivery-time">Delivery time: {{restaurant().deliveryTimeMin}}-{{restaurant().deliveryTimeMax}} min</div>
+  <div class="delivery-cost">Delivery fee: {{restaurant().deliveryFee}}</div>
+  <div class="is-active">Status: {{restaurant().isActive}}</div>
+</section>
