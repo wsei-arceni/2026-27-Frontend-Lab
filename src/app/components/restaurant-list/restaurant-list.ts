@@ -1,7 +1,7 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { RestaurantCard } from '../restaurant-card/restaurant-card';
-import data from '../../data/restaurants.json'
 import { Restaurant } from '../../models/restaurant.model';
+import { Restaurants } from '../../restaurants';
 
 
 @Component({
@@ -11,5 +11,10 @@ import { Restaurant } from '../../models/restaurant.model';
   templateUrl: './restaurant-list.html',
 })
 export class RestaurantList {
-  restaurants = signal(data as Restaurant[])
+  restaurantService = inject(Restaurants);
+  readonly restaurants = this.restaurantService.getAll();
+
+  onSearch() {
+    this.restaurants.set([])
+  }
 }
